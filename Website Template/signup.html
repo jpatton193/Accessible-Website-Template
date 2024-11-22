@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Sign Up Form template</title>
+<link href="style.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="signup validation.js"></script>
+</head>
+<body>
+	<!-- Nav bar-->
+	<!--Nav bar-->
+	<nav>
+        <div id="logo">
+			<a href="home.html"><image id="mainlogo" src="yourlogo.jpg" alt="Company Logo"></image></a>
+		</div>
+        <div id="nav-links">
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="login.html">Log In</a>
+			<a href="signup.html">Sign Up</a>
+			<!--When one of the options is clicked, it'll open the link-->
+			<select onChange="window.location.href=this.value">
+    			<option value="a">Settings</option>
+    			<option value="links.html">Links</option>
+				<option value="accessibility.html">Accessibility</option>
+				<option value="profile.html">Profile</option>
+			</select>
+        </div>
+        <div id="search-bar">
+            <input id = "searchBar" type="text" placeholder="Search">
+			<button>Search</button>  
+        </div>
+    </nav>
+	<h2 id = "verification-message" style="visibility: hidden;">Signup Successful.<br>Thank you for creating an account!</h2>
+	<!-- Signup form, some built in validation used (required, min/maxlength, types), javascript provides some additional validation for passwords-->
+	<div id="signup-form">
+		<header>
+			<h1>Sign up</h1>
+		</header>
+		<!-- When form is submitted, javascript function validateSignUp is called. See javascript file for more info-->
+    	<form onsubmit="validateSignUp(event)">
+        	<label for="email"><strong>Email:</strong></label>
+        	<input type="email" id="email" name="email" required placeholder="Enter your email address">
+		
+        	<label for="firstName"><strong>First Name:</strong></label>
+        	<input type="text" id="firstName" name="firstName" minlength="3" maxlength="30" required placeholder="Enter your forename">
+
+        	<label for="surname"><strong>Surname: </strong></label>
+        	<input type="text" id="surname" name="surname" minlength="3" maxlength="30" required placeholder="Enter your surname">
+
+        	<label for="dob"><strong>Date of Birth:</strong></label>
+        	<input type="date" id="dob" name="dob" required>
+
+        	<label for="mobile">Mobile Number (Optional):</label>
+			<!-- 'pattern' allows numbers 0-9 as well as a +. -->
+			<input type="tel" id="mobile" name="mobile" pattern="[0-9+]+" maxlength="15" placeholder="Enter your phone number">
+
+        	<label for="password"><strong>Password:</strong></label>
+        	<input type="password" id="password" name="password" minlength="8" required placeholder="Enter a strong password">
+
+        	<label for="confirmPassword"><strong>Re-enter Password:</strong></label>
+			<!-- javascript will compare this entry to original password entry, alert user if they are different.-->
+        	<input type="password" id="passwordReEntry" name="passwordReEntry" required placeholder="Re-enter your password">
+			
+			<!--Some different input types that may be useful for a signup form.-->
+			<label for="petsy/n">Do you have any pets? (Optional)</label>
+			<div class="pets">
+				<label for="yes">Yes</label>
+				<input type="radio" id="yes" name="petans" val="1">
+				<label for="no">No</label>
+				<input type="radio" id="no" name="petans" val="0"><br>
+			</div>
+			<label for="pet-type">If yes, what kind of pet do you have? (Optional)</label>
+			
+			<select id = "species" name = "species">
+				<option value = "N/A">N/A</option>
+				<option value = "Dog">Dog</option>
+				<option value = "Cat">Cat</option>
+				<option value = "Bird">Bird</option>
+				<option value = "Reptile">Reptile</option>
+				<option value = "Rodent">Rodent</option>
+				<option value = "Other">Other</option>
+			</select>
+			<br>
+			<br>
+			
+        	<button type="submit" id="submit-signup">Sign Up</button>
+    	</form>
+		<!-- link to login page-->
+		<a href="login.html">Already have an account?</a>		
+	</div>
+	<footer>
+		<a href="home.html"><image id="minilogo" src="yourlogo.jpg" alt="Company Logo"></image></a>
+		<p>Some information about the company<br>
+		Founded 1/1/2024<br>
+		Support email: company-support@company.com<br>
+		</p>
+	</footer>
+</body>
+</html>

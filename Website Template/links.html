@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Links</title>
+<link href="style.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="signup validation.js"></script>
+</head>
+<body>
+	<!--Nav bar-->
+	<!--Nav bar-->
+	<nav>
+        <div id="logo">
+			<a href="home.html"><image id="mainlogo" src="yourlogo.jpg" alt="Company Logo"></image></a>
+		</div>
+        <div id="nav-links">
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="login.html">Log In</a>
+			<a href="signup.html">Sign Up</a>
+			<!--When one of the options is clicked, it'll open the link-->
+			<select onChange="window.location.href=this.value">
+    			<option value="a">Settings</option>
+    			<option value="links.html">Links</option>
+				<option value="accessibility.html">Accessibility</option>
+				<option value="profile.html">Profile</option>
+			</select>
+        </div>
+        <div id="search-bar">
+            <input id = "searchBar" type="text" placeholder="Search">
+			<button>Search</button>  
+        </div>
+    </nav>
+	<!-- Links to all pages within this template-->
+	<div id="about">
+		<h1>Links:</h1>
+		<a href="login.html">Login</a><br>
+		<a href="signup.html">Sign Up</a><br>
+		<a href="home.html">Home</a><br>
+		<a href="about.html">About</a><br>
+		<a href="links.html">This page</a><br>
+		<a href="accessibility.html">Accessibility</a><br>
+		<a href="profile.html">Profile</a><br><br><br>
+	</div>
+	<footer>
+		<a href="home.html"><image id="minilogo" src="yourlogo.jpg" alt="Company Logo"></image></a>
+		<p>Some information about the company<br>
+		Founded 1/1/2024<br>
+		Support email: company-support@company.com<br>
+		</p>
+	</footer>
+</body>
+</html>

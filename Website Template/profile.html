@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Profile</title>
+<link href="style.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="signup validation.js"></script>
+</head>
+<body>
+	<!--Nav bar-->
+	<nav>
+        <div id="logo">
+			<a href="home.html"><image id="mainlogo" src="yourlogo.jpg" alt="Company Logo"></image></a>
+		</div>
+        <div id="nav-links">
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="login.html">Log In</a>
+			<a href="signup.html">Sign Up</a>
+			<!--When one of the options is clicked, it'll open the link-->
+			<select onChange="window.location.href=this.value">
+    			<option value="a">Settings</option>
+    			<option value="links.html">Links</option>
+				<option value="accessibility.html">Accessibility</option>
+				<option value="profile.html">Profile</option>
+			</select>
+        </div>
+        <div id="search-bar">
+            <input id = "searchBar" type="text" placeholder="Search">
+			<button>Search</button>  
+        </div>
+    </nav>
+	<header>
+			<h1>Profile</h1>
+		</header>
+	<form onsubmit="updateDetails(event)">
+        	<label for="email"><strong>Email:</strong></label>
+        	<input type="email" id="email" name="email" required placeholder="(load email address)" readonly>
+		
+        	<label for="firstName"><strong>First Name:</strong></label>
+        	<input type="text" id="firstName" name="firstName" minlength="3" maxlength="30" required placeholder="(load forename)" readonly>
+
+        	<label for="surname"><strong>Surname: </strong></label>
+        	<input type="text" id="surname" name="surname" minlength="3" maxlength="30" required placeholder="Enter your surname">
+
+        	<label for="dob"><strong>Date of Birth:</strong></label>
+        	<input type="date" id="dob" name="dob" readonly>
+
+        	<label for="mobile">Mobile Number (Optional):</label>
+			<!-- 'pattern' allows numbers 0-9 as well as a +. -->
+			<input type="tel" id="mobile" name="mobile" pattern="[0-9+]+" maxlength="15" placeholder="Enter your phone number">
+
+        	<label for="password"><strong>Change Password:</strong></label>
+        	<input type="password" id="password" name="password" minlength="8" placeholder="Enter a strong password">
+
+        	<label for="confirmPassword"><strong>Re-enter Password:</strong></label>
+			<!-- javascript will compare this entry to original password entry, alert user if they are different.-->
+        	<input type="password" id="passwordReEntry" name="passwordReEntry" placeholder="Re-enter your password">
+			
+			<!--Some different input types that may be useful for a signup form.-->
+			
+	
+			<label for="pet-type">Owned pet (if applicable)</label>
+			
+			<select id = "species" name = "species">
+				<option value = "N/A">N/A</option>
+				<option value = "Dog">Dog</option>
+				<option value = "Cat">Cat</option>
+				<option value = "Bird">Bird</option>
+				<option value = "Reptile">Reptile</option>
+				<option value = "Rodent">Rodent</option>
+				<option value = "Other">Other</option>
+			</select>
+			<br>
+			<br>
+			
+        	<button type="submit">Apply Changes</button>
+		<br><br>
+		</form><br>
+	<button onclick="logout()">Log Out</button><br>
+	<footer>
+		<a href="home.html"><image id="minilogo" src="yourlogo.jpg" alt="Company Logo"></image></a>
+		<p>Some information about the company<br>
+		Founded 1/1/2024<br>
+		Support email: company-support@company.com<br>
+		</p>
+	</footer>
+</body>
+</html>

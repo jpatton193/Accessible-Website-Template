@@ -1,0 +1,334 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* body bg is an off-white colour to make white form bg stand out more */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F4F4F4;
+	color: #000000;
+    margin: 0;
+	padding: 0;
+	display: flex;
+    flex-direction: column;
+	align-items: center;
+	min-height: 100vh;
+}
+
+/* light gray bg with white text - should be easy to read, accessible to colourblind users */
+nav,
+ footer{
+     background-color: #49B248;
+     color: #000;
+     display: flex; 
+     align-items: center;
+     padding: 10px 20px;
+     width: 100%;
+}
+/* top nav bar will always appear onscreen, in front of any elements that would otherwise appear behind it */
+nav{
+	position: sticky;
+	top: 0;
+	z-index: 10;
+}
+
+nav a,
+footer a{
+    color: #000;
+    text-decoration: none;
+	margin: 15px;
+}
+
+footer{
+	padding: 5px 20px;	
+	margin-top: auto;
+	text-align: center;
+}
+
+
+footer p {
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	font-size: 10px;
+}
+
+/* forms will be centered with a white background, rounded edges.*/
+form {
+	background-color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    width: 300px;
+    margin-top: 20px;
+	
+}
+
+.signup-form label {
+	display: inline-block;
+	margin-bottom: 8px;
+}
+
+.login-form label {
+	display: inline-block;
+	margin-bottom: 8px;
+}
+
+input {
+	width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+	background-color: #333CE3;
+    color: #fff;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* buttons will change colour to a lighter blue when mouse hovers over them */
+button:hover {
+	background-color: #3073E8;
+}
+
+#login-form,
+#signup-form{
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+	width: 100%;
+}
+
+#login-form{
+	padding-top: 150px;
+}
+
+#logo {
+	margin-right: auto;
+}
+
+#search-bar {
+	flex-direction: row;
+    margin-left: auto;
+    display: flex;
+    align-items: baseline;
+}
+
+a{
+	padding: 20px 0px 40px;
+}
+
+select{
+	background-color: transparent;
+	color: #00000;
+	border-color: #B3ADAE;
+}
+
+#mainlogo{
+	width: 100px;
+	height: 100px;
+}
+
+#minilogo{
+	width: 50px;
+	height: 50px;
+}
+/* homepage background and heading*/
+#banner {
+  	background-image: url("field.jpg");
+  	background-size: cover;
+  	background-position: bottom center;
+  	height: 700px;
+  	width: 100%;
+}
+
+#banner #content h1 {
+	text-align: center;
+  	position: relative;
+  	top: 50px;
+	width: 400px;
+	margin: 0 auto;
+  	z-index: 0;
+}
+
+/* articles appear in rows of two on homepage*/
+article{
+    border: 1px solid #D5BFBF;
+	background-color: #FFFFFF;
+	border-radius: 4px;
+	margin: 20px;
+    display: inline-block;
+    width: calc(48% - 40px); 
+    box-sizing: border-box;
+    vertical-align: top;
+	overflow: visible;
+}
+
+#welcomeVideo h2{
+	margin: 0;
+	padding: 20px;
+    text-align: left;
+}
+
+video {
+    width: 400px;
+    height: 250px;
+}
+
+#about{
+	background-color: #FFFFFF;
+	display: block;
+    flex-direction: column;
+    align-items: center;
+	width: 100%;
+	border-radius: 4px;
+}
+
+#about p{
+	padding: 20px 100px 20px 20px;
+}
+
+#verification-message,
+#loggedIn-message{
+	display: none;
+    flex-direction: column;
+    align-items: center;
+	width: 50%;
+	padding: 20px 20px 0px 20px;
+	margin-top: 200px;
+	margin-bottom: 0px;
+	background-color: #FFFFFF;
+	border-radius: 4px;
+}
+/* part of signup form */
+.pets {
+  display: flex; 
+  text-align: center;
+}
+/* faq-info and faq also used in accessibility pages as they are fairly plain */
+#faq-info{
+	background-color: #FFFFFF;
+	padding: 50;
+	flex-direction: column;
+}
+#faq{
+	background-color: #FFFFFF;
+	display: block;
+	flex-direction:column;
+	align-items:center;
+	width: 100%;
+	padding: 25 50 0 0
+}
+/* formatting for questions and answers on faq page */
+.question {
+    cursor: pointer;
+}
+
+.answer {
+    overflow: scroll;
+}
+
+.question h3 {
+    margin: 0;
+}
+
+.question span {
+    font-size: 18px;
+    margin-left: 5px;
+}
+.question h2{
+	font-weight: 100
+}
+/* center video in article on homepage */
+#video-container {
+    position: relative;
+	display: flex;
+	justify-content: center;
+}
+#video-container video {
+    width: 50%;
+}
+/* buttons to change to the previous or next video on homepage */
+.prev, .next {
+	position: absolute;
+	top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    cursor: pointer;
+}
+.prev {
+    left: 0;
+}
+.next {
+    right: 0;
+    }
+
+/*CSS for switch to turn image zoom off/on*/
+.switch{
+	position:relative;
+	display: inline-block;
+	width: 60px;
+	height: 34px;
+}
+.switch input{
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+.slider{
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #D7D7D7;
+	position: absolute;
+	cursor: pointer;
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+/*CSS for when switch is clicked*/
+input:checked + .slider {
+  background-color: #3970EA;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #3970EA;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(23px);
+  -ms-transform: translateX(23px);
+  transform: translateX(23px);
+}
+/* Makes the switch rounded*/
+.slider.round {
+  border-radius: 34px;
+}
+.slider.round:before {
+  border-radius: 50%;
+}
+
+#faq{
+	margin:30px;
+	border-radius: 4px;
+}
+
+.font-size-selector {
+  margin-bottom: 20px;
+}
+
+/* Used to enable image zoom*/
+ .zoom {
+    transition: transform .3s;
+    width: 200px;
+    height: 200px;
+  }
+
+.zoom:hover {
+  transform: scale(1.5);
+}

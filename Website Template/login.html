@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Login</title>
+<link href="style.css" rel="stylesheet">
+<script src="signup validation.js"></script>
+</head>
+<body>
+	<!-- Nav bar-->
+	<!--Nav bar-->
+	<nav>
+        <div id="logo">
+			<a href="home.html"><image id="mainlogo" src="yourlogo.jpg" alt="Company Logo"></image></a>
+		</div>
+        <div id="nav-links">
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="login.html">Log In</a>
+			<a href="signup.html">Sign Up</a>
+			<!--When one of the options is clicked, it'll open the link-->
+			<select onChange="window.location.href=this.value">
+    			<option value="a">Settings</option>
+    			<option value="links.html">Links</option>
+				<option value="accessibility.html">Accessibility</option>
+				<option value="profile.html">Profile</option>
+			</select>
+        </div>
+        <div id="search-bar">
+            <input id = "searchBar" type="text" placeholder="Search">
+			<button>Search</button>  
+        </div>
+    </nav>
+	<!-- This message appears when login is successful - for now, username: jpatton194@gmail.com password: Password1! are hard coded to make this section appear and the login form disappear. -->
+	<h2 id = "loggedIn-message" style="visibility: hidden;">Login Successful.<br>Feel free to continue browsing<br>our website.</h2>
+	
+	<div id="login-form">
+		<header>
+			<h1>Log In</h1>
+		</header>
+		<form onsubmit="validateLogin(event)">
+			<label for="email"><strong>Email:</strong></label>
+			<!-- Email and password must be input, javascript function 'validateLogin' checks if user/pass match hard coded user/pass.-->
+        	<input type="email" id="email" name="email" required placeholder="Enter your email address">
+		<label for="password"><strong>Password:</strong></label>
+        	<input type="password" id="password" name="password" minlength="8" required placeholder="Enter your password">
+		<button type="submit">Log In</button>
+    	</form>
+		<!-- Link to signup.html in case user accidentally tries to login before creating an account.-->
+		<a href="signup.html">Don't have an account? Click here.</a>
+	</div>
+	<footer>
+		<a href="home.html"><image id="minilogo" src="yourlogo.jpg" alt="Company Logo"></image></a>
+		<p>Some information about the company<br>
+		Founded 1/1/2024<br>
+		Support email: company-support@company.com<br>
+		</p>
+	</footer>
+</body>
+</html>

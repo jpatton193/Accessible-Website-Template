@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>FAQ</title>
+<link href="style.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="signup validation.js"></script>
+</head>
+<body>
+	<!--Nav bar-->
+	<nav>
+        <div id="logo">
+			<a><image id="mainlogo" src="yourlogo.jpg" alt="Company Logo"></image></a>
+		</div>
+        <div id="nav-links">
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="login.html">Log In</a>
+			<a href="signup.html">Sign Up</a>
+			<!--When one of the options is clicked, it'll open the link-->
+			<select onChange="window.location.href=this.value">
+    			<option value="a">Settings</option>
+    			<option value="links.html">Links</option>
+				<option value="accessibility.html">Accessibility</option>
+				<option value="profile.html">Profile</option>
+			</select>
+        </div>
+        <div id="search-bar">
+            <input id = "searchBar" type="text" placeholder="Search">
+			<button>Search</button>  
+        </div>
+    </nav>
+	<div id="faq-info">
+		<h1>Frequently Asked Questions</h1>
+		<p>This page contains answers to the most common questions our customers ask us.<br>We hope that this resource is useful, although if you have any further questions<br>please contact us through telephone or via our support email address.</p>
+	</div>
+	<div id="faq">
+		<div class="question" onclick="toggleAnswer('answer1')">
+			<!--<span>&#9660</span> inserts a down arrow at the end of each question-->
+			<h1>How can i get in contact with you? <span>&#9660;</span></h1>
+			<div id="answer1" style="display:none;">
+				<h2>You can contact us at our email companyname@gmail.com, or our phone number 08001234<br>between the hours of 9am and 5pm.</h2>
+			</div>
+		</div>
+		<div class="question" onclick="toggleAnswer('answer2')">
+			<h1>How do i create an account? <span>&#9660;</span></h1>
+			<div id="answer2" style="display:none;">
+				<h2>You can create an account on our sign up page, accessible <a href="signup.html">here</a></h2>
+			</div>
+		</div>
+		<div class="question" onclick="toggleAnswer('answer3')">
+			<h1>How do i change my password?<span>&#9660;</span></h1>
+			<div id="answer3" style="display:none;">
+				<h2>Contact support or change it on your profile.</h2>
+			</div>
+		</div>
+		<div class="question" onclick="toggleAnswer('answer4')">
+			<h1>What does this company do?<span>&#9660;</span></h1>
+			<div id="answer4" style="display:none;">
+				<h2>Many things.</h2>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<a href="home.html"><image id="minilogo" src="yourlogo.jpg" alt="Company Logo"></image></a>
+		<p>Some information about the company<br>
+		Founded 1/1/2024<br>
+		Support email: company-support@company.com<br>
+		</p>
+	</footer>
+</body>
+</html>

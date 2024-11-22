@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Home</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="signup validation.js"></script>
+<link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+	<!--Nav bar-->
+	<nav>
+        <div id="logo">
+			<a href="home.html"><image id="mainlogo" src="yourlogo.jpg" alt="Company Logo"></image></a>
+		</div>
+        <div id="nav-links">
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="login.html">Log In</a>
+			<a href="signup.html">Sign Up</a>
+			<!--When one of the options is clicked, it'll open the link-->
+			<select onChange="window.location.href=this.value">
+    			<option value="a">Settings</option>
+    			<option value="links.html">Links</option>
+				<option value="accessibility.html">Accessibility</option>
+				<option value="profile.html">Profile</option>
+			</select>
+        </div>
+        <div id="search-bar">
+            <input id = "searchBar" type="text" placeholder="Search">
+			<button>Search</button>  
+        </div>
+    </nav>
+	<!--Stock image background with a welcome message-->
+	<div id="banner">
+		<div id="content">
+		<h1>Welcome to<br>Our<br>Website</h1></div>
+	</div>
+	<!--Section where upcoming events or news could be displayed, with buttons linking to main articles (for this template they link to the 'about' page instead)-->
+	<div id="welcome-content">
+		<article>
+			<h2>Some information about<br>our company</h2>
+			<p>Our company does many things. See our About page to learn more!</p>
+			<button onclick="window.location.href = 'about.html'">Learn More</button>
+		</article>
+		<article>
+			<h2>FAQ</h2>
+			<p>Click the button below for answers to questions we find customers asking often.</p>
+			<button onclick="window.location.href = 'faq.html'">Learn More</button>
+		</article>
+		<article>	
+			<h2>Some videos about our company</h2>
+			<div id="video-container">
+            <video id="video" src="tortoise.mp4" controls>Video Not Supported</video>
+            <div class="prev" onclick="changeVideo(-1)">❮ Prev</div>
+            <div class="next" onclick="changeVideo(1)">Next ❯</div>
+			</div>
+		</article>
+		<article>
+			<h2>Our company founder</h2>
+			<img src="yourlogo.jpg" class="zoom" alt="The founder of our company">
+		</article><br><br><br><br>
+	</div>
+	<footer>
+		<a href="home.html"><image id="minilogo" src="yourlogo.jpg" alt="Company Logo"></image></a>
+		<p>Some information about the company<br>
+		Founded 1/1/2024<br>
+		Support email: company-support@company.com<br>
+		</p>
+	</footer>
+</body>
+</html>
